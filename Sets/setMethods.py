@@ -43,8 +43,8 @@ print(h)
 
 # pop()
 i = {"A", True, 1, 2, 5, 3, 5, 6}
-print(i.pop())  # return random element from set
-
+print(i.pop())  # return random element from set and delete it
+print(i)
 
 # update()
 i = {1, 2, 3, 6, 5, 3}
