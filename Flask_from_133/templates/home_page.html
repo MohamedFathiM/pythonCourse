@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+    <link href="{{ url_for('static',filename='css/home.css') }}" rel='stylesheet'>
+{% endblock %}
+
+{% block title %}
+{{ page_title }}
+{% endblock %}
+
+
+{% block content %}
+
+<h2 class="page-head">{{ title }}</h2>
+<p class="page-description">{{ description }} </p>
+
+    {% for skill in skills %}
+    <div class="skill-box">
+        <div class="skill-name"> {{ skill[0] }}</div>
+        <div class="skill-progress">
+            <span data-width="{{ skill[1] }}%"></span>
+        </div>
+    </div>
+    {% endfor %}
+
+{% endblock %}
